@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+
+<body 
+  style="background-color: wheat;">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+  
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+      <p>  Improbable Beef, a food start-up, is searching for bacteria that could be used for meat substitute.  
+        A hypothesis has been developed that this potential microorganism on found in a bellybutton.  Volunteers have agreed
+        to have their bellybutton bacteria cultured to help in this discovery.  The graphs are the findings of the research.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p> Volunteer's top ten bacteria found in their belly button.  The population of bacteria could help expose common bacteria within the target population</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p> How many time a volunteer washed their belly button during a week.  This can help show if frequent washing lowers bacterial count and variety.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <P> The bubble graph helps further display the relationship between a OTU and its bacterial prevalence in comparison to other top OTUs. </P>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/plots.js"></script>
+
+</body>
+
+</html>
